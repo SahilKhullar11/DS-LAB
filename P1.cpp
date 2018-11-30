@@ -53,7 +53,7 @@ int main()
 	cout<<"Enter elements ->"<<endl;
 	for(int i=0;i<n;i++)
 	  cin>>arr[i];
-	cout<<"1 -> Insertion"<<endl<<"2 -> Deletion"<<endl<<"3 -> Location"<<endl<<"4 -> Display"<<endl<<"5 -> End"<<endl;
+	cout<<"1(insert)"<<endl<<"2(delete)"<<endl<<"3(find)"<<endl<<"4(display)"<<endl<<"5(exit)"<<endl;
 	while(1)
 	{
 		cout<<"Enter the choice : ";
@@ -62,23 +62,19 @@ int main()
 		{
 			case 1:
 				{
-					cout<<"Enter the index value : ";
 					cin>>index;
-					cout<<"Enter the value : ";
 					cin>>value;
 					n=insert_ele(arr,n,index,value);
 					break;
 				}
 			case 2:
 				{
-					cout<<"Enter the index value : ";
 					cin>>index;
 					n=delete_ele(arr,n,index);
 					break;
 				}
 			case 3:
 				{
-					cout<<"Enter the element for search : ";
 					cin>>ele;
 					s=search_ele(arr,n,ele);
 					cout<<"Element "<<ele<<" is at "<<s<<" position"<<endl;
@@ -86,12 +82,11 @@ int main()
 				}
 			case 4:
 				{
-					cout<<"Array : -"<<endl;
 					display(arr,n);
 					break;
 				}
 			case 5:
-				exit(0);
+				break;
 		}
 	}
 }
